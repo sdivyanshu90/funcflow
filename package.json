@@ -1,0 +1,39 @@
+{
+  "name": "funcflow",
+  "version": "0.1.0",
+  "description": "Model-agnostic function calling router middleware in TypeScript.",
+  "main": "dist/router/router.js",
+  "types": "dist/router/router.d.ts",
+  "bin": {
+    "funcflow-router": "dist/router/router.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit",
+    "dev": "tsx router/router.ts",
+    "test": "vitest run"
+  },
+  "keywords": [
+    "router",
+    "function-calling",
+    "typescript",
+    "llm",
+    "middleware"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.54.0",
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^16.4.5",
+    "openai": "^4.77.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.2"
+  }
+}
